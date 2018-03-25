@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
  
- root 'api/vi/recipes#index'
+ root 'api/v1/recipes#index'
   
   namespace :api do
     namespace :v1 do
