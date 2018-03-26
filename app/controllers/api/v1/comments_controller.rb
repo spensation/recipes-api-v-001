@@ -1,4 +1,6 @@
 class Api::V1::CommentsController < ApplicationController
+	skip_before_action :verify_authenticity_token
+	
 	def index
 		if params[:recipe_id]
 			@comments = Recipe.find(params[:recipe_id]).comments

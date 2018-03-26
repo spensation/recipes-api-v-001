@@ -1,5 +1,6 @@
 class Api::V1::LikesController < ApplicationController
-
+	skip_before_action :verify_authenticity_token
+	
 	def index
 		@likes = Like.all
 		render json: @likes 
