@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  resources :ingredients
  root 'api/v1/recipes#index'
   
   namespace :api do
