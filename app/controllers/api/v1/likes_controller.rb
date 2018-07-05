@@ -8,7 +8,7 @@ class Api::V1::LikesController < ApplicationController
 
 	def create
 		@recipe = Recipe.find(params[:recipe_id])
-		@like = @recipe.likes.create
+		@like = @recipe.likes.create(like_params)
 		render json: @like
 	end
 

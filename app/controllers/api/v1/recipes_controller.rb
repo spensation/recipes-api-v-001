@@ -13,7 +13,7 @@ class Api::V1::RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    render json: @recipe
+    render json: @recipe, status: 201
   end
 
   # def update
@@ -34,7 +34,7 @@ class Api::V1::RecipesController < ApplicationController
 
   private
     def recipe_params
-      params.require(:recipe).permit(:id, :title, :category, :serves, :prep_time, :cook_time, :total_time, :ingredients, :directions)
+      params.require(:recipe).permit(:id, :title, :category, :serves, :prep_time, :cook_time, :total_time, :ingredients => [], :directions)
     end
 
 end
