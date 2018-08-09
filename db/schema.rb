@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180613120601) do
+ActiveRecord::Schema.define(version: 20180716213938) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 20180613120601) do
     t.string "title"
     t.string "category"
     t.string "serves"
-    t.text "ingredients"
     t.text "directions"
     t.string "prep_time"
     t.string "cook_time"

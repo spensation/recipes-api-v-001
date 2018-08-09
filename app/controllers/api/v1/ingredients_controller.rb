@@ -1,7 +1,7 @@
-class IngredientsController < ApplicationController
+class API::V1::IngredientsController < ApplicationController
 	def create
 		@recipe = Recipe.find(params[:recipe_id])
-		@ingredient = @recipe.ingredients.create(ingredient_params)
+		@ingredient = @recipe.ingredients.build(ingredient_params)
 		render json: @ingredient
 	end
 

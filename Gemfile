@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'rack-cors'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'paperclip'
 
 group :development, :test do
   gem 'sqlite3'
