@@ -16,12 +16,11 @@ class Api::V1::RecipesController < ApplicationController
     render json: @recipe, status: 201
   end
 
-  # def update
-  #   @recipe = Recipe.find(params[:id])
-  #   @recipe.increment!(:like)
-  #   @recipe.save
-  #   render json: @recipe
-  # end
+  def update
+    @recipe = Recipe.find(params[:id])
+    @recipe.update_attributes(recipe_params)
+    render json: @recipe
+  end
 
   def destroy
     @recipe = Recipe.find(params[:id])
